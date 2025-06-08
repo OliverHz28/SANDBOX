@@ -1,0 +1,8 @@
+#!/bin/bash
+
+commit_message=$(cat "$1")
+
+if ! [[ $commit_message =~ ^[A-Z]{3,5}-[0-9]+:\ .+ ]]; then
+    echo "Error: El mensaje de commit debe seguir el formato 'PROY-123: descrip>"
+    exit 1
+fi
