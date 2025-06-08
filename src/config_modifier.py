@@ -11,3 +11,4 @@ def leer_json(file_path):
             return json.load(f)
         except json.JSONDecodeError:
             raise ValueError(f"El archivo '{file_path}' no contiene un JSON válido")
+        
